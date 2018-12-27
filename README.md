@@ -41,5 +41,5 @@ docker-composer run app sh -c "django-admin.py startproject app ."
 
 Run tests with following command
 ```
-docker-compose run app sh -c "python manage.py test"
+docker-compose run app sh -c "python manage.py test && flake8"
 ```
