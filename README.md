@@ -43,3 +43,8 @@ Run tests with following command
 ```
 docker-compose run app sh -c "python manage.py test && flake8"
 ```
+
+Make migrations of core app
+```
+docker-compose run app sh -c "python manage.py makemigrations core"
+```
