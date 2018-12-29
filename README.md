@@ -48,3 +48,8 @@ Make migrations of core app
 ```
 docker-compose run app sh -c "python manage.py makemigrations core"
 ```
+
+Creating a superuser for login into the /admin area
+```
+docker-compose run app sh -c "python manage.py createsuperuser"
+```
