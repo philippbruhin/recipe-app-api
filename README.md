@@ -41,7 +41,7 @@ docker-composer run app sh -c "django-admin.py startproject app ."
 
 Run tests with following command
 ```
-docker-compose run app sh -c "python manage.py test && flake8"
+docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
 
 Make migrations of core app
@@ -52,4 +52,9 @@ docker-compose run app sh -c "python manage.py makemigrations core"
 Creating a superuser for login into the /admin area
 ```
 docker-compose run app sh -c "python manage.py createsuperuser"
+```
+
+Creating a new app called user (with removing docker container after running command)
+```
+docker-compose run --rm app sh -c "python manage.py startapp user"
 ```
